@@ -9,16 +9,29 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Gson gson = new Gson();
-        try {
-            Person person = gson.fromJson(new FileReader("src/main/java/org/example/Person/Person.json"), Person.class);
-            for (Person friend : person.friends) {
-                System.out.println(friend.lastname);
-                for (Phones phones : friend.phoneNumbers) {
-                    System.out.println(" - phone type " + phones.type + ", phone number: " + phones.number);
-                }
-            }
-        }catch (FileNotFoundException e){e.getMessage();}
+//        Gson gson = new Gson();
+//        try {
+//            Person person = gson.fromJson(new FileReader("src/main/java/org/example/Person/Person.json"), Person.class);
+//            for (Person friend : person.friends) {
+//                System.out.println(friend.firstname);
+////                for (Phones phones : friend.phoneNumbers) {
+////                    System.out.println(" - phone type " + phones.type + ", phone number: " + phones.number);
+////                }
+//            }
+//            for (Person friend : person.friends) {
+//                System.out.println(friend.firstname);
+//            }
+//        } catch (FileNotFoundException e) {
+//            e.getMessage();
+//        }
+
+
+        Counter counter = new Counter();
+        Thread thread = new CounterThread(counter);
+        Thread thread1 = new CounterThread(counter);
+
+        thread.start();
+        thread1.start();
     }
 }
 
