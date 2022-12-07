@@ -1,0 +1,45 @@
+{
+  "firstname": "Борис",
+  "lastname": "Иванов",
+  "age": 30,
+  "address": {
+    "streetAddress": "1-Красноармйская",
+    "city": "СПБ",
+    "state": "Ленинградская область",
+    "postalCode": 195000
+  },
+  "phoneNumbers": [
+    {
+      "type": "home",
+      "number": "452-542-452"
+    },
+    {
+      "type": "mobile",
+      "number": "312-312-452"
+    }
+  ],
+  "friends": [
+    {
+      "firstname": "Иван",
+      "lastname": "Сидоров",
+      "age": 20,
+      "phoneNumbers": [
+        {
+          "type": "home",
+          "number": "452-542-452"
+        }
+      ]
+    },
+    {
+      "firstname": "Петр",
+      "lastname": "Петров",
+      "age": 23,
+      "phoneNumbers": [
+        {
+          "type": "home",
+          "number": "444-444-444"
+        }
+      ]
+    }
+  ]
+}
